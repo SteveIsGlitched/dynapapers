@@ -1,4 +1,5 @@
 #include <json.hpp>
+#include <cstdlib>
 #include <fstream>
 #include <iostream>
 #include <ctime>
@@ -39,7 +40,10 @@ int main() {
 	string version = "v0.0.1";
 	cout << "Running dynapapers " << version << " (C++ rewrite)." << '\n';
 
-	string fileName{"/home/steveisglitched/.config/dynapapers/config.json"};
+	char* env = getenv("USER");
+	string user = env;
+
+	string fileName{"/home/" + user + "/.config/dynapapers/config.json"};
 	ifstream file(fileName);
 
 	if (!file)
