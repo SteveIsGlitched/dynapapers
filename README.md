@@ -8,6 +8,8 @@
 
 An utility used for changing wallpapers dynamically. This was created as a hobby beginning project, and is at very early development stage. Uses [nlohmann/json](https://github.com/nlohmann/json) library for config parsing.
 
+</div>
+
 ## Installation
 G++ is needed for compiling. Clone this repository and execute `make install` in the folder.
 
@@ -25,5 +27,3 @@ The config file should be located in this location: `/home/$USER/.config/dynapap
 }
 ```
 The program will update wallpapers depending on current hour, for example if right now is 15:25, it will find picture called `15.png` in the `path` directory, specified in config. The program will check current hour every `updateInterval` seconds.
-
-</div>
